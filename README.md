@@ -5,10 +5,14 @@ Structure du dossier et descriptions des fichiers:
 
 main.py : Fichier Python où l'utilisateur pourra jouer au jeu du pendu
 fonctions.py : Fichier Python où les fonctions et le "back-end" du jeu seront programmés
+
+/ressources
 mots_pendus.txt : Fichier Texte où est une banque de mots par défaut.
 
 
 Instructions : 
 
 main.py
+fonctions.py
+
 

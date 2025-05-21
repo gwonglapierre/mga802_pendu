@@ -2,7 +2,7 @@
 # Module 3 - Jeu du pendu (MGA802)
 # Auteur:Gabriel Wong-Lapierre
 # Date de création: 2025-05-15
-# Dernière modification: 2022-05-15
+# Dernière modification: 2025-05-21
 #---------------------------------------------------------------------------------------
 import random
 import os
@@ -120,24 +120,28 @@ def verif_lettre(lettre:str,mot:str):
 
 ## BONUS INDICE
 
-# def indice(mot_actuel:list, mot:str, track_lettres:list):
-#     '''
-#     Fonction qui permet de donner un indice à l'utilisateur s'il lui reste une chance
+def indice(mot:str, track_lettres:list):
+    '''
+    Fonction qui permet de donner un indice à l'utilisateur s'il lui reste une chance
 
-#     Entrée:
+    Entrée:
 
-#     mot_actuel : État actuel du mot de la tentative du joueur
-#     mot : Le mot que l'utilisateur doit deviner
-#     track_lettres : Toutes les lettres qui ont été tentées par le joueur jusqu'à présent
+    mot : Le mot que l'utilisateur doit deviner
+    track_lettres : Toutes les lettres qui ont été tentées par le joueur jusqu'à présent
 
-#     Sorties:
+    Sorties:
 
-#     val = (bool) True : la lettre se trouve au moins une fois dans le mot / False : la lettre ne se trouve pas dans le mot
-#     ind = (list) Indices  
-#     '''
+    indice : une lettre qui ne se trouve pas dans le mot et qui n'a pas été tentée encore
+    '''
 
-#     for i in string.ascii_uppercase
+    # Stocker l'alphabet dans une liste puis réordonner de façon aléatoire
+    alpha_list = list(string.ascii_uppercase)
+    random.shuffle(alpha_list)
+
+    # Itérer dans l'alphabet "shuffled" jusqu'à arriver à une lettre qui n'a pas été tentée et excluse du mot
+    for a in alpha_list:
+        if a not in track_lettres and a not in mot:
+            return a
 
 
-#     return
 
